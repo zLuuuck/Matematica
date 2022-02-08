@@ -8,7 +8,7 @@
 <h3> (𝓩) Medidas de comprimento </h3>
 <h3> (;<) Física (Não desenvolvido) </h3>
 
-<h1> Programa pra resolução de algumas contas matemáticas</h1>
+<h1> Programa para resolução de algumas contas matemáticas</h1>
 
 <h2> 📱 TERMUX </h2>
 
