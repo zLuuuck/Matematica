@@ -305,7 +305,7 @@ else:
 
   print("a ok")
   
-pg = input('\nDeseja fazer uma nova consulta? [sim][nao]')
+pg = input('\nDeseja rodar o programa novamente? s/n')
 if pg == 'sim' or pg == 'SIM' or pg == 's' or pg == 'S':
     os.system('clear')
     os.system('python3 main.py')
