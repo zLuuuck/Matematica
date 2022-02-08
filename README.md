@@ -1,15 +1,12 @@
 <h1> UTILIDADES: </h1>
 
-
-<h2>
- (𝓩) Tabuada 50X 
- (𝓩) Desconto em % 
- (𝓩) Aumento em % 
- (𝓩) Pitágoras 
- (𝓩) Pitágoras sem um dos catetos 
- (𝓩) Medidas de comprimento 
- (;<) Física (Não desenvolvido) 
-</h2>
+<h2> (𝓩) Tabuada 50X <h2>
+<h2> (𝓩) Desconto em % <h2>
+<h2> (𝓩) Aumento em % </h2>
+<h2> (𝓩) Pitágoras </h2>
+<h2> (𝓩) Pitágoras sem um dos catetos </h2>
+<h2> (𝓩) Medidas de comprimento </h2>
+<h2> (;<) Física (Não desenvolvido) </h2>
 
 <h1> Programa pra resolução de algumas contas matemáticas</h1>
 
