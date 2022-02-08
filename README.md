@@ -1,4 +1,32 @@
-# Matematica
-Um repositório para colocar scripts em Python envolvendo matemática 
+|￣￣￣￣￣￣ |
+| Programa de|
+| Matemática |
+|   do Z     |
+| ___________|
+(\__/) ||
+(•ㅅ•) ||
+/    づ
+█▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+█░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                █▀▄ ▄▀▄
+                █░█ █░█
+                ▀▀░ ░▀░
+╔════╗     ╔╗─── ╔╗─╔╗ ╔╗─╔╗ ╔╗─╔╗ ╔═══╗ ╔╗╔═╗
+╚══╗═║     ║║─── ║║─║║ ║║─║║ ║║─║║ ║╔═╗║ ║║║╔╝
+──╔╝╔╝     ║║─── ║║─║║ ║║─║║ ║║─║║ ║║─╚╝ ║╚╝╝─
+─╔╝╔╝─     ║║─╔╗ ║║─║║ ║║─║║ ║║─║║ ║║─╔╗ ║╔╗║─
+╔╝═╚═╗     ║╚═╝║ ║╚═╝║ ║╚═╝║ ║╚═╝║ ║╚═╝║ ║║║╚╗
+╚════╝     ╚═══╝ ╚═══╝ ╚═══╝ ╚═══╝ ╚═══╝ ╚╝╚═╝
 
-Ao longo do tempo, estou colocando várias aplicações com o python que envolvem matemática, obrigado por utilizar eles ^^
+<h1>UTILIDADES:</h1>
+
+<h2>
+(Z) Tabuada 50X
+(Z) Desconto em %
+(Z) Aumento em %
+(Z) Pitagoras
+(Z) Pitagoras sem um dos catetos
+(Z) Medidas de comprimento
+(;<) Física (Não desenvolvido)
+<h2>
