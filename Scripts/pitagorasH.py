@@ -1,0 +1,23 @@
+import math
+
+H = int(input('Digite a hipotenusa: '))
+C = int(input('Digite o cateto: '))
+H1 = math.pow(H, 2)
+C1 = math.pow(C, 2)
+scateto = H1 - C1
+raiz = math.sqrt(scateto)
+h = math.ceil(raiz)
+print(f'O Cateto desse triângulo retângulo é {h}.')
+print(f'{H}² = {C}² + C²')
+print(f'{H1} = {C1} + C²')
+time.sleep(1)
+print('Agora, nós invertemos a operação.')
+time.sleep(1)
+print(f'{H1} - {C1} = C²')
+print(f'{scateto} = C²')
+time.sleep(1)
+print('Agora, fazeremos a conta inversa, transformando a potencia (C²), em raiz quadrada (²√).')
+time.sleep(1)
+print(f'C = ²√{scateto}')
+print(f'Obtendo assim, o resultado de {h}.')
+print(f'Sendo assim, o Cateto desconhecido tem o valor de {h}')
