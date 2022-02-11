@@ -18,6 +18,8 @@ time.sleep(1.5)
 os.system('clear')
 
 ############################################################
+
+
 def tabuada():
     os.system('clear')
     print(txt2)
@@ -127,6 +129,49 @@ def tabuada():
 
 ############################################################
 
+
+def porcentagens():
+    time.sleep(1)
+    os.system('clear')
+    print(txtPORCENT)
+    opçãoPORCENT = int(input(': '))
+    if opçãoPORCENT == 1:
+        desconto()
+    elif opçãoPORCENT == 2:
+        aumento()
+    else:
+        print("a ok")
+
+    rodar_dnv = input('\nDeseja rodar o programa novamente? s/n: ')
+    if rodar_dnv == 'sim' or rodar_dnv == 'SIM' or rodar_dnv == 's' or rodar_dnv == 'S':
+        os.system('clear')
+        os.system('python3 main.py')
+    elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
+        adeus = "Adeus em 3.."
+        print(adeus)
+        time.sleep(1)
+        adeus = "Adeus em 32."
+        print(adeus)
+        time.sleep(1)
+        adeus = "Adeus em 321"
+        print(adeus, 'fechando..')
+        time.sleep(1)
+        os.system('clear')
+############################################################
+
+
+def potencia():
+    import  math
+    os.system('clear')
+    print(txt2)
+    num = int(input('Digite o número: '))
+    ex = int(input('Digite o expoente: '))
+    pot = math.pow(num, ex)
+    print(f'O resultado de sua conta é {pot}')
+
+############################################################
+
+
 def desconto():
     os.system('clear')
     print(txt2)
@@ -142,6 +187,7 @@ def desconto():
 
 ############################################################
 
+
 def aumento():
     os.system('clear')
     print(txt2)
@@ -153,8 +199,9 @@ def aumento():
     print(f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
     print(f'agora ele é de R${novo:.2f}')
     print(f'Ganhou-se {totalau}')
-    
+
 ############################################################
+
 
 def medidas():
     os.system('clear')
@@ -168,10 +215,43 @@ def medidas():
     km = metro / 1000
     print(f'A medida de {metro}m corresponde a \n{km}km \n{hm}hm \n', end='')
     print(f'{dam}dam \n{dm}dm \n{cm}cm \n{mm}mm')
-    
+
 ############################################################
 
+
 def pitagoras():
+    time.sleep(1)
+    os.system('clear')
+    print(txtPIT)
+    opçãoPIT = int(input(': '))
+    
+    if opçãoPIT == 1:
+        pitagorasC()
+    elif opçãoPIT == 2:
+        pitagorasIn()
+    else:        
+        print("a ok")
+
+    rodar_dnv = input('\nDeseja rodar o programa novamente? s/n: ')
+    if rodar_dnv == 'sim' or rodar_dnv == 'SIM' or rodar_dnv == 's' or rodar_dnv == 'S':
+        os.system('clear')
+        os.system('python3 main.py')
+    elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
+        adeus = "Adeus em 3.."
+        print(adeus)
+        time.sleep(1)
+        adeus = "Adeus em 32."
+        print(adeus)
+        time.sleep(1)
+        adeus = "Adeus em 321"
+        print(adeus, 'fechando..')
+        time.sleep(1)
+        os.system('clear')
+
+############################################################
+
+
+def pitagorasC():
     os.system('clear')
     print(txt2)
     import math
@@ -195,6 +275,7 @@ def pitagoras():
     print(f'cateto adjacente = {c2} !')
 
 ############################################################
+
 
 def pitagorasIn():
     os.system('clear')
@@ -224,9 +305,21 @@ def pitagorasIn():
     print(f'C = ²√{scateto}')
     print(f'Obtendo assim, o resultado de {h}.')
     print(f'Sendo assim, o Cateto desconhecido tem o valor de {h}')
-    
+
 ############################################################
+
+
+def raiz4():
+    os.system('clear')
+    print(txt2)
+    import math
+    num = int(input('Digite o número que quer calcular: '))
+    resultado = math.sqrt(num)
+    print(f'O resultado da sua conta é {resultado}!')
+
+
 txt = """
+
 |￣￣￣￣￣￣ |
 | Programa de|
 | Matemática |
@@ -253,14 +346,16 @@ txt = """
 ########### OBRIGADO  POR UTILIZAR ! ###########
 
     o que deseja?
-    [1] tabuada
-    [2] desconto em porcentagem
-    [3] aumento em porcentagem
-    [4] pitagoras
-    [5] pitagoras com hipotenusa
-    [6] medidas
-    [7] física (Não desenvolvido)
+    [ 1 ] Tabuada
+    [ 2 ] Porcentagens
+    [ 3 ] Potencia
+    [ 4 ] Pitagoras
+    [ 5 ] Raiz Quadrada
+    [ 6 ] Medidas
+    [ 7 ] Física (Não desenvolvido)
 """
+
+
 txt2 = """
  █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
  █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
@@ -275,48 +370,88 @@ txt2 = """
     ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
     ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
 """
+
+
+txtPORCENT = """
+ █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+ █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+ ▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                 █▀▄ ▄▀▄
+                 █░█ █░█
+                 ▀▀░ ░▀░
+    ╔════╗     ╔╗───╔╗─╔╗╔╗─╔╗╔╗─╔╗╔═══╗╔╗╔═╗
+    ╚══╗═║     ║║───║║─║║║║─║║║║─║║║╔═╗║║║║╔╝
+    ──╔╝╔╝     ║║───║║─║║║║─║║║║─║║║║─╚╝║╚╝╝─
+    ─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
+    ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
+    ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
+    Área de porcentagem.
+
+    [ 1 ] Desconto
+    [ 2 ] Aumento
+
+"""
+
+txtPIT = """
+ █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+ █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+ ▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                 █▀▄ ▄▀▄
+                 █░█ █░█
+                 ▀▀░ ░▀░
+    ╔════╗     ╔╗───╔╗─╔╗╔╗─╔╗╔╗─╔╗╔═══╗╔╗╔═╗
+    ╚══╗═║     ║║───║║─║║║║─║║║║─║║║╔═╗║║║║╔╝
+    ──╔╝╔╝     ║║───║║─║║║║─║║║║─║║║║─╚╝║╚╝╝─
+    ─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
+    ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
+    ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
+    Área de porcentagem.
+
+    [ 1 ] Pitagoras descobrindo hipotenusa
+    [ 2 ] Pitagoras descobrindo cateto
+    
+"""
 print(txt)
-od = input(': ')
-if od == '1':
+opção = input(': ')
+if opção == '1':
     tabuada()
-elif od == '2':
-    desconto()
-elif od == '3':
-    aumento()
-elif od == '4':
+elif opção == '2':
+    porcentagens()
+elif opção == '3':
+    potencia()
+elif opção == '4':
     pitagoras()
-elif od == '5':
-    pitagorasIn()
-elif od == '6':
+elif opção == '5':
+    raiz4()
+elif opção == '6':
     medidas()
-elif od == '7':
+elif opção == '7':
     print('não ta desenvolvido')
-    varad = "Saindo em 3.."
-    print(varad)
+    adeus = "Saindo em 3.."
+    print(adeus)
     time.sleep(1)
-    varad = "Saindo em 32."
-    print(varad)
+    adeus = "Saindo em 32."
+    print(adeus)
     time.sleep(1)
-    varad = "Saindo em 321"
-    print(varad, 'fechando..')
+    adeus = "Saindo em 321"
+    print(adeus, 'fechando..')
     time.sleep(1)
     os.system('clear')
 else:
+    print("a ok")
 
-  print("a ok")
-  
-pg = input('\nDeseja rodar o programa novamente? s/n')
-if pg == 'sim' or pg == 'SIM' or pg == 's' or pg == 'S':
+rodar_dnv = input('\nDeseja rodar o programa novamente? s/n: ')
+if rodar_dnv == 'sim' or rodar_dnv == 'SIM' or rodar_dnv == 's' or rodar_dnv == 'S':
     os.system('clear')
     os.system('python3 main.py')
-elif pg == 'nao' or pg== 'NAO' or pg== 'n' or pg== 'N':
-    varad = "Adeus em 3.."
-    print(varad)
+elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
+    adeus = "Adeus em 3.."
+    print(adeus)
     time.sleep(1)
-    varad = "Adeus em 32."
-    print(varad)
+    adeus = "Adeus em 32."
+    print(adeus)
     time.sleep(1)
-    varad = "Adeus em 321"
-    print(varad, 'fechando..')
+    adeus = "Adeus em 321"
+    print(adeus, 'fechando..')
     time.sleep(1)
     os.system('clear')
