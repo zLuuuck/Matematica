@@ -1,22 +1,5 @@
 import os
 import time
-
-print('Loading…')
-time.sleep(0.5)
-print('30%')
-print('███▒▒▒▒▒▒▒')
-time.sleep(0.5)
-print('50%')
-print('█████▒▒▒▒▒')
-time.sleep(0.5)
-print('80%')
-print('████████▒▒')
-time.sleep(0.5)
-print('100%')
-print('██████████')
-time.sleep(1.5)
-os.system('clear')
-
 ############################################################
 
 
@@ -131,7 +114,6 @@ def tabuada():
 
 
 def porcentagens():
-    time.sleep(1)
     os.system('clear')
     print(txtPORCENT)
     opçãoPORCENT = int(input(': '))
@@ -147,21 +129,15 @@ def porcentagens():
         os.system('clear')
         os.system('python3 main.py')
     elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
-        adeus = "Adeus em 3.."
-        print(adeus)
         time.sleep(1)
-        adeus = "Adeus em 32."
-        print(adeus)
-        time.sleep(1)
-        adeus = "Adeus em 321"
-        print(adeus, 'fechando..')
+        print('fechando..')
         time.sleep(1)
         os.system('clear')
 ############################################################
 
 
 def potencia():
-    import  math
+    import math
     os.system('clear')
     print(txt2)
     num = int(input('Digite o número: '))
@@ -178,7 +154,7 @@ def desconto():
     preço = float(input('Digite o preço do produto: R$'))
     des = float(input('Digite o a % do desconto: '))
     novo = preço - (preço * des / 100)
-    totaldes = novo - preço
+    totaldes = preço - novo
 
     print(f'O preço é R${preço}, com um desconto de {des}%, fica R${novo}.')
     print(f'O desconto é de {totaldes}')
@@ -191,12 +167,14 @@ def desconto():
 def aumento():
     os.system('clear')
     print(txt2)
-    sal = float(input('Digite o seu salário, ou um valor qualquer(use com "." invés de ","): R$'))
+    sal = float(input(
+        'Digite o seu salário, ou um valor qualquer(use com "." invés de ","): R$'))
     aumento = float(input('Digite a % do aumento: '))
     novo = sal + (sal * aumento / 100)
-    totalau = sal - novo
+    totalau = novo - sal
 
-    print(f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
+    print(
+        f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
     print(f'agora ele é de R${novo:.2f}')
     print(f'Ganhou-se {totalau}')
 
@@ -206,15 +184,127 @@ def aumento():
 def medidas():
     os.system('clear')
     print(txt2)
-    metro = float(input('Digite uma distância em metros: '))
-    dm = metro * 10
-    cm = metro * 100
-    mm = metro * 1000
-    dam = metro / 10
-    hm = metro / 100
-    km = metro / 1000
-    print(f'A medida de {metro}m corresponde a \n{km}km \n{hm}hm \n', end='')
-    print(f'{dam}dam \n{dm}dm \n{cm}cm \n{mm}mm')
+    metro = float(input('Digite um medida: '))
+    tipo = str(input('Digite o tipo da medida: '))
+
+    if tipo == 'mm' or tipo == 'milímetros' or tipo == 'MM':
+        mm = metro
+        cm = metro / 10
+        dm = metro / 100
+        m = metro / 1000
+        dam = metro / 10000
+        hm = metro / 100000
+        km = metro / 1000000
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
+
+    elif tipo == 'cm' or tipo == 'centimetros' or tipo == 'CM':
+        mm = metro * 10
+        cm = metro
+        dm = metro / 10
+        m = metro / 100
+        dam = metro / 1000
+        hm = metro / 10000
+        km = metro / 100000
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
+
+    elif tipo == 'dm' or tipo == 'decimetro' or tipo == 'DM':
+        mm = metro * 100
+        cm = metro * 10
+        dm = metro
+        m = metro / 10
+        dam = metro / 100
+        hm = metro / 1000
+        km = metro / 10000
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
+
+    elif tipo == 'm' or tipo == 'metro' or tipo == 'M':
+        dm = metro * 10
+        cm = metro * 100
+        mm = metro * 1000
+        m = metro
+        dam = metro / 10
+        hm = metro / 100
+        km = metro / 1000
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km')
+        print(f'{hm}hm')
+        print(f'{dam}dam')
+        print(f'{m}m ')
+        print(f'{dm}dm')
+        print(f'{cm}cm')
+        print(f'{mm}mm')
+
+    elif tipo == 'dam' or tipo == 'decametro' or tipo == 'DAM':
+        mm = metro * 10000
+        cm = metro * 1000
+        dm = metro * 100
+        m = metro * 10
+        dam = metro
+        hm = metro / 10
+        km = metro / 100
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
+
+    elif tipo == 'hm' or tipo == 'hectometro' or tipo == 'HM':
+        mm = metro * 100000
+        cm = metro * 10000
+        dm = metro * 1000
+        m = metro * 100
+        dam = metro * 10
+        hm = metro
+        km = metro / 10
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
+
+    elif tipo == 'km' or tipo == 'kilometros' or tipo == 'KM':
+        mm = metro * 1000000
+        cm = metro * 100000
+        dm = metro * 10000
+        m = metro * 1000
+        dam = metro * 100
+        hm = metro * 10
+        km = metro
+        print(f'A medida de {metro} {tipo} corresponde a:')
+        print(f'{km}km, Quilômetros')
+        print(f'{hm}hm, Hectomêtro')
+        print(f'{dam}dam, Decametro')
+        print(f'{m}m, Metros')
+        print(f'{dm}dm, Decimetro')
+        print(f'{cm}cm, Centimetros')
+        print(f'{mm}mm, Milímetros')
 
 ############################################################
 
@@ -224,12 +314,12 @@ def pitagoras():
     os.system('clear')
     print(txtPIT)
     opçãoPIT = int(input(': '))
-    
+
     if opçãoPIT == 1:
         pitagorasC()
     elif opçãoPIT == 2:
         pitagorasIn()
-    else:        
+    else:
         print("a ok")
 
     rodar_dnv = input('\nDeseja rodar o programa novamente? s/n: ')
@@ -409,7 +499,7 @@ txtPIT = """
 
     [ 1 ] Pitagoras descobrindo hipotenusa
     [ 2 ] Pitagoras descobrindo cateto
-    
+
 """
 print(txt)
 opção = input(': ')
@@ -427,14 +517,8 @@ elif opção == '6':
     medidas()
 elif opção == '7':
     print('não ta desenvolvido')
-    adeus = "Saindo em 3.."
-    print(adeus)
     time.sleep(1)
-    adeus = "Saindo em 32."
-    print(adeus)
-    time.sleep(1)
-    adeus = "Saindo em 321"
-    print(adeus, 'fechando..')
+    print('fechando..')
     time.sleep(1)
     os.system('clear')
 else:
@@ -445,13 +529,6 @@ if rodar_dnv == 'sim' or rodar_dnv == 'SIM' or rodar_dnv == 's' or rodar_dnv == 
     os.system('clear')
     os.system('python3 main.py')
 elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
-    adeus = "Adeus em 3.."
-    print(adeus)
-    time.sleep(1)
-    adeus = "Adeus em 32."
-    print(adeus)
-    time.sleep(1)
-    adeus = "Adeus em 321"
-    print(adeus, 'fechando..')
+    print('fechando..')
     time.sleep(1)
     os.system('clear')
