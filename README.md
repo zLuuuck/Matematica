@@ -1,3 +1,7 @@
+<h1> UPDATES </h1>
+
+<h3> Medidas: atualização no sistema, fazendo com que a base do conversor seja geral, e não só em metros (m) </h3>
+
 <h1> UTILIDADES: </h1>
 
 <h3> (𝓩) Tabuada 50X <h3>
