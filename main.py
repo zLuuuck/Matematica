@@ -1,6 +1,5 @@
 import os
 import time
-############################################################
 
 
 def tabuada():
@@ -110,17 +109,35 @@ def tabuada():
     print(f'{nu}x49 = {x49}')
     print(f'{nu}x50 = {x50}')
 
-############################################################
-
 
 def porcentagens():
     os.system('clear')
     print(txtPORCENT)
     opçãoPORCENT = int(input(': '))
     if opçãoPORCENT == 1:
-        desconto()
+        os.system('clear')
+        print(txt2)
+        preço = float(input('Digite o preço do produto: R$'))
+        des = float(input('Digite o a % do desconto: '))
+        novo = preço - (preço * des / 100)
+        totaldes = preço - novo
+
+        print(f'O preço é R${preço}, com um desconto de {des}%, fica R${novo}.')
+        print(f'O desconto é de {totaldes}')
+
     elif opçãoPORCENT == 2:
-        aumento()
+        os.system('clear')
+        print(txt2)
+        sal = float(input(
+            'Digite o seu salário, ou um valor qualquer(use com "." invés de ","): R$'))
+        aumento = float(input('Digite a % do aumento: '))
+        novo = sal + (sal * aumento / 100)
+        totalau = novo - sal
+
+        print(
+            f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
+        print(f'agora ele é de R${novo:.2f}')
+        print(f'Ganhou-se {totalau}')
     else:
         print("a ok")
 
@@ -133,7 +150,6 @@ def porcentagens():
         print('fechando..')
         time.sleep(1)
         os.system('clear')
-############################################################
 
 
 def potencia():
@@ -144,41 +160,6 @@ def potencia():
     ex = int(input('Digite o expoente: '))
     pot = math.pow(num, ex)
     print(f'O resultado de sua conta é {pot}')
-
-############################################################
-
-
-def desconto():
-    os.system('clear')
-    print(txt2)
-    preço = float(input('Digite o preço do produto: R$'))
-    des = float(input('Digite o a % do desconto: '))
-    novo = preço - (preço * des / 100)
-    totaldes = preço - novo
-
-    print(f'O preço é R${preço}, com um desconto de {des}%, fica R${novo}.')
-    print(f'O desconto é de {totaldes}')
-
-    print('')
-
-############################################################
-
-
-def aumento():
-    os.system('clear')
-    print(txt2)
-    sal = float(input(
-        'Digite o seu salário, ou um valor qualquer(use com "." invés de ","): R$'))
-    aumento = float(input('Digite a % do aumento: '))
-    novo = sal + (sal * aumento / 100)
-    totalau = novo - sal
-
-    print(
-        f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
-    print(f'agora ele é de R${novo:.2f}')
-    print(f'Ganhou-se {totalau}')
-
-############################################################
 
 
 def medidas():
@@ -306,19 +287,63 @@ def medidas():
         print(f'{cm}cm, Centimetros')
         print(f'{mm}mm, Milímetros')
 
-############################################################
-
 
 def pitagoras():
-    time.sleep(1)
     os.system('clear')
     print(txtPIT)
     opçãoPIT = int(input(': '))
 
     if opçãoPIT == 1:
-        pitagorasC()
+        os.system('clear')
+        print(txt2)
+        import math
+
+        c1 = int(input('Digite o primeiro cateto: '))
+        c2 = int(input('Digite o segundo cateto: '))
+
+        cateto1 = math.pow(c1, 2)
+        cateto2 = math.pow(c2, 2)
+        scateto = cateto1 + cateto2
+        raiz = math.sqrt(scateto)
+        h = math.ceil(raiz)
+
+        print(f'A hipotenusa desse triângulo retângulo é {h}')
+        print(f'h² = {c1}² + {c2}²')
+        print(f'h² = {cateto1} + {cateto2}')
+        print(f'h² = {scateto}')
+        print(f'h = √{scateto}')
+        print(f'Assim, chegando ao resultado de {h},', end=' ')
+        print(f'hipotenusa = {h}, cateto oposto = {c1} e', end=' ')
+        print(f'cateto adjacente = {c2} !')
     elif opçãoPIT == 2:
-        pitagorasIn()
+        os.system('clear')
+        print(txt2)
+        import math
+
+        H = int(input('Digite a hipotenusa: '))
+        C = int(input('Digite o cateto: '))
+
+        H1 = math.pow(H, 2)
+        C1 = math.pow(C, 2)
+        scateto = H1 - C1
+        raiz = math.sqrt(scateto)
+        h = math.ceil(raiz)
+
+        print(f'O Cateto desse triângulo retângulo é {h}.')
+        print(f'{H}² = {C}² + C²')
+        print(f'{H1} = {C1} + C²')
+        time.sleep(1)
+        print('Agora, nós invertemos a operação.')
+        time.sleep(1)
+        print(f'{H1} - {C1} = C²')
+        print(f'{scateto} = C²')
+        time.sleep(1)
+        print('Agora, fazeremos a conta inversa, transformando a potencia (C²), em raiz quadrada (²√).')
+        time.sleep(1)
+        print(f'C = ²√{scateto}')
+        print(f'Obtendo assim, o resultado de {h}.')
+        print(f'Sendo assim, o Cateto desconhecido tem o valor de {h}')
+
     else:
         print("a ok")
 
@@ -338,74 +363,71 @@ def pitagoras():
         time.sleep(1)
         os.system('clear')
 
-############################################################
-
-
-def pitagorasC():
-    os.system('clear')
-    print(txt2)
-    import math
-
-    c1 = int(input('Digite o primeiro cateto: '))
-    c2 = int(input('Digite o segundo cateto: '))
-
-    cateto1 = math.pow(c1, 2)
-    cateto2 = math.pow(c2, 2)
-    scateto = cateto1 + cateto2
-    raiz = math.sqrt(scateto)
-    h = math.ceil(raiz)
-
-    print(f'A hipotenusa desse triângulo retângulo é {h}')
-    print(f'h² = {c1}² + {c2}²')
-    print(f'h² = {cateto1} + {cateto2}')
-    print(f'h² = {scateto}')
-    print(f'h = √{scateto}')
-    print(f'Assim, chegando ao resultado de {h},', end=' ')
-    print(f'hipotenusa = {h}, cateto oposto = {c1} e', end=' ')
-    print(f'cateto adjacente = {c2} !')
-
-############################################################
-
-
-def pitagorasIn():
-    os.system('clear')
-    print(txt2)
-    import math
-
-    H = int(input('Digite a hipotenusa: '))
-    C = int(input('Digite o cateto: '))
-
-    H1 = math.pow(H, 2)
-    C1 = math.pow(C, 2)
-    scateto = H1 - C1
-    raiz = math.sqrt(scateto)
-    h = math.ceil(raiz)
-
-    print(f'O Cateto desse triângulo retângulo é {h}.')
-    print(f'{H}² = {C}² + C²')
-    print(f'{H1} = {C1} + C²')
-    time.sleep(1)
-    print('Agora, nós invertemos a operação.')
-    time.sleep(1)
-    print(f'{H1} - {C1} = C²')
-    print(f'{scateto} = C²')
-    time.sleep(1)
-    print('Agora, fazeremos a conta inversa, transformando a potencia (C²), em raiz quadrada (²√).')
-    time.sleep(1)
-    print(f'C = ²√{scateto}')
-    print(f'Obtendo assim, o resultado de {h}.')
-    print(f'Sendo assim, o Cateto desconhecido tem o valor de {h}')
-
-############################################################
-
 
 def raiz4():
     os.system('clear')
     print(txt2)
     import math
-    num = int(input('Digite o número que quer calcular: '))
+    num = int(input('Digite o número: '))
     resultado = math.sqrt(num)
     print(f'O resultado da sua conta é {resultado}!')
+
+
+def prodNot():
+    os.system('clear')
+    print(txt2)
+    txtNOT = """
+    █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+    █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+    ▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                    █▀▄ ▄▀▄
+                    █░█ █░█
+                    ▀▀░ ░▀░
+        ╔════╗     ╔╗───╔╗─╔╗╔╗─╔╗╔╗─╔╗╔═══╗╔╗╔═╗
+        ╚══╗═║     ║║───║║─║║║║─║║║║─║║║╔═╗║║║║╔╝
+        ──╔╝╔╝     ║║───║║─║║║║─║║║║─║║║║─╚╝║╚╝╝─
+        ─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
+        ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
+        ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
+        Área de Produtos Notáveis.
+
+        [ 1 ] Quadrado da soma
+        [ 2 ] Quadrado da diferença
+
+    """
+    import math
+    print(txtNOT)
+    opNOT = input(': ')
+    if opNOT == '1':
+        os.system('clear')
+        print(txt2)
+        print('Se o X estiver sozinho, coleque 1, mas se tiver algum valor, coloque o valor de X.')
+        print('O programa imprime todas as repostas com o valor de X')
+        a = int(input('Digite o valor de X: '))
+        b = int(input('Digite o valor do segundo número: '))
+        # (a + b)² = a² + 2ab + b²
+        x = math.pow(a, 2)
+        y = math.pow(b, 2)
+        ab = 2 * a * b
+        print('#' * 20)
+        print(f'A operação digitada foi ({a} + {b})²')
+        print('isso é igual a:')
+        print(f'{x}x² + {ab}x + {y}')
+    elif opNOT == '2':
+        os.system('clear')
+        print(txt2)
+        print('Se o X estiver sozinho, coleque 1, mas se tiver algum valor, coloque o valor de X.')
+        print('O programa imprime todas as repostas com o valor de X')
+        a = int(input('Digite o valor de X: '))
+        b = int(input('Digite o valor do segundo número: '))
+        # (a + b)² = a² - 2ab + b²
+        x = math.pow(a, 2)
+        y = math.pow(b, 2)
+        ab = 2 * a * b
+        print('#' * 20)
+        print(f'A operação digitada foi ({a}x - {b})²')
+        print('isso é igual a:')
+        print(f'{x}x² - {ab}x + {y}')
 
 
 txt = """
@@ -443,6 +465,8 @@ txt = """
     [ 5 ] Raiz Quadrada
     [ 6 ] Medidas
     [ 7 ] Física (Não desenvolvido)
+    [ 8 ] Produtos Notáveis
+
 """
 
 
@@ -475,7 +499,7 @@ txtPORCENT = """
     ─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
     ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
     ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
-    Área de porcentagem.
+    Área de Porcentagem.
 
     [ 1 ] Desconto
     [ 2 ] Aumento
@@ -495,7 +519,7 @@ txtPIT = """
     ─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
     ╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
     ╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
-    Área de porcentagem.
+    Área de Pitagoras.
 
     [ 1 ] Pitagoras descobrindo hipotenusa
     [ 2 ] Pitagoras descobrindo cateto
@@ -521,6 +545,8 @@ elif opção == '7':
     print('fechando..')
     time.sleep(1)
     os.system('clear')
+elif opção == '8':
+    prodNot()
 else:
     print("a ok")
 
