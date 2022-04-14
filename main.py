@@ -6,108 +6,8 @@ def tabuada():
     os.system('clear')
     print(txt2)
     nu = int(input('Digite um número:'))
-
-    x1 = nu * 1
-    x2 = nu * 2
-    x3 = nu * 3
-    x4 = nu * 4
-    x5 = nu * 5
-    x6 = nu * 6
-    x7 = nu * 7
-    x8 = nu * 8
-    x9 = nu * 9
-    x10 = nu * 10
-    x11 = nu * 11
-    x12 = nu * 12
-    x13 = nu * 13
-    x14 = nu * 14
-    x15 = nu * 15
-    x16 = nu * 16
-    x17 = nu * 17
-    x18 = nu * 18
-    x19 = nu * 19
-    x20 = nu * 20
-    x21 = nu * 21
-    x22 = nu * 22
-    x23 = nu * 23
-    x24 = nu * 24
-    x25 = nu * 25
-    x26 = nu * 26
-    x27 = nu * 27
-    x28 = nu * 28
-    x29 = nu * 29
-    x30 = nu * 30
-    x31 = nu * 31
-    x32 = nu * 32
-    x33 = nu * 33
-    x34 = nu * 34
-    x35 = nu * 35
-    x36 = nu * 36
-    x37 = nu * 37
-    x38 = nu * 38
-    x39 = nu * 39
-    x40 = nu * 40
-    x41 = nu * 41
-    x42 = nu * 42
-    x43 = nu * 43
-    x44 = nu * 44
-    x45 = nu * 45
-    x46 = nu * 46
-    x47 = nu * 47
-    x48 = nu * 48
-    x49 = nu * 49
-    x50 = nu * 50
-    print(f'A tabuada de {nu} é: ')
-    print(f'{nu}x 1 = {x1}')
-    print(f'{nu}x 2 = {x2}')
-    print(f'{nu}x 3 = {x3}')
-    print(f'{nu}x 4 = {x4}')
-    print(f'{nu}x 5 = {x5}')
-    print(f'{nu}x 6 = {x6}')
-    print(f'{nu}x 7 = {x7}')
-    print(f'{nu}x 8 = {x8}')
-    print(f'{nu}x 9 = {x9}')
-    print(f'{nu}x10 = {x10}')
-    print(f'{nu}x11 = {x11}')
-    print(f'{nu}x12 = {x12}')
-    print(f'{nu}x13 = {x13}')
-    print(f'{nu}x14 = {x14}')
-    print(f'{nu}x15 = {x15}')
-    print(f'{nu}x16 = {x16}')
-    print(f'{nu}x17 = {x17}')
-    print(f'{nu}x18 = {x18}')
-    print(f'{nu}x19 = {x19}')
-    print(f'{nu}x20 = {x20}')
-    print(f'{nu}x21 = {x21}')
-    print(f'{nu}x22 = {x22}')
-    print(f'{nu}x23 = {x23}')
-    print(f'{nu}x24 = {x24}')
-    print(f'{nu}x25 = {x25}')
-    print(f'{nu}x26 = {x26}')
-    print(f'{nu}x27 = {x27}')
-    print(f'{nu}x28 = {x28}')
-    print(f'{nu}x29 = {x29}')
-    print(f'{nu}x30 = {x30}')
-    print(f'{nu}x31 = {x31}')
-    print(f'{nu}x32 = {x32}')
-    print(f'{nu}x33 = {x33}')
-    print(f'{nu}x34 = {x34}')
-    print(f'{nu}x35 = {x35}')
-    print(f'{nu}x36 = {x36}')
-    print(f'{nu}x37 = {x37}')
-    print(f'{nu}x38 = {x38}')
-    print(f'{nu}x39 = {x39}')
-    print(f'{nu}x40 = {x40}')
-    print(f'{nu}x41 = {x41}')
-    print(f'{nu}x42 = {x42}')
-    print(f'{nu}x43 = {x43}')
-    print(f'{nu}x44 = {x44}')
-    print(f'{nu}x45 = {x45}')
-    print(f'{nu}x46 = {x46}')
-    print(f'{nu}x47 = {x47}')
-    print(f'{nu}x48 = {x48}')
-    print(f'{nu}x49 = {x49}')
-    print(f'{nu}x50 = {x50}')
+    for c in range(1, 101):
+        print(f'{nu} x {c} = {nu * c}')
 
 
 def porcentagens():
@@ -121,7 +21,6 @@ def porcentagens():
         des = float(input('Digite o a % do desconto: '))
         novo = preço - (preço * des / 100)
         totaldes = preço - novo
-
         print(f'O preço é R${preço}, com um desconto de {des}%, fica R${novo}.')
         print(f'O desconto é de {totaldes}')
 
@@ -133,23 +32,10 @@ def porcentagens():
         aumento = float(input('Digite a % do aumento: '))
         novo = sal + (sal * aumento / 100)
         totalau = novo - sal
-
         print(
             f'Seu salário/valor é de R${sal}. Você ganhou {aumento}% de aumento,', end=' ')
         print(f'agora ele é de R${novo:.2f}')
         print(f'Ganhou-se {totalau}')
-    else:
-        print("a ok")
-
-    rodar_dnv = input('\nDeseja rodar o programa novamente? s/n: ')
-    if rodar_dnv == 'sim' or rodar_dnv == 'SIM' or rodar_dnv == 's' or rodar_dnv == 'S':
-        os.system('clear')
-        os.system('python3 main.py')
-    elif rodar_dnv == 'nao' or rodar_dnv == 'NAO' or rodar_dnv == 'n' or rodar_dnv == 'N':
-        time.sleep(1)
-        print('fechando..')
-        time.sleep(1)
-        os.system('clear')
 
 
 def potencia():
@@ -430,8 +316,44 @@ def prodNot():
         print(f'{x}x² - {ab}x + {y}')
 
 
-txt = """
+def fisica():
+    os.system('clear')
+    print(txtfis)
+    option = input(': ')
+    if option == '1':
+        print('Converta todas as medidas de tempo e distancias para segundos(s) e metros(m)')
+        print('OBS: Não tenho certeza se funciona com números negativos, então só faça com os positivos.')
+        n1 = float(input('Digite o espaço percorrido(m): '))
+        n2 = float(input('Digite o tempo percorrido(s): '))
+        velocidade = n1 / n2
+        print(f'a velocidade média é de {velocidade}m/s')
+    elif option == '2':
+        print(txtfis0)
+        optionpt2 = input(': ')
+        if optionpt2 == '1':
+            import time
+            print('Essa equação tem a base como X = X0 + V . t')
+            print('OBS: Não tenho certeza se funciona com números negativos, então só faça com os positivos.')
+            time.sleep(1)
+            x0 = float(input('Digite o valor da posição inicial: '))
+            v = float(input('Digute o valor da velocidade: '))
+            t = float(input('Digite o valor do tempo: '))
+            conta = x0 + (v * t)
+            print(f'A posição final é {conta}m ou km/h.')
+        elif optionpt2 == '2':
+            import time
+            print('Essa equação tem como base T = X0 + V . X')
+            print('OBS: Não tenho certeza se funciona com números negativos, então só faça com os positivos.')
+            time.sleep(1)
+            x = float(input('Digite o valor da posição final: '))
+            v = float(input('Digite o valor da velocidade: '))
+            x0 = float(input('Digite o valor da posição inicial: '))
+            operação = (x - x0) / v
+            print(f'O tempo é {operação}s ou h.')
 
+
+
+txt = """
 |￣￣￣￣￣￣ |
 | Programa de|
 | Matemática |
@@ -464,7 +386,7 @@ txt = """
     [ 4 ] Pitagoras
     [ 5 ] Raiz Quadrada
     [ 6 ] Medidas
-    [ 7 ] Física (Não desenvolvido)
+    [ 7 ] Física
     [ 8 ] Produtos Notáveis
 
 """
@@ -525,6 +447,43 @@ txtPIT = """
     [ 2 ] Pitagoras descobrindo cateto
 
 """
+
+txtfis = """
+ █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+ █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+ ▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                 █▀▄ ▄▀▄
+                 █░█ █░█
+                 ▀▀░ ░▀░
+╔════╗     ╔╗───╔╗─╔╗╔╗─╔╗╔╗─╔╗╔═══╗╔╗╔═╗
+╚══╗═║     ║║───║║─║║║║─║║║║─║║║╔═╗║║║║╔╝
+──╔╝╔╝     ║║───║║─║║║║─║║║║─║║║║─╚╝║╚╝╝─
+─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
+╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
+╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
+
+    [ 1 ] Velocidade media escalar
+    [ 2 ] Equação de posição em função do tempo
+    
+"""
+txtfis0 = """
+ █▄░▄█ ▄▀▄ ▀█▀ █▀▀ █▄░▄█ ▄▀▄ ▀█▀ ▀ ▄▀ ▄▀▄
+ █░█░█ █▀█ ░█░ █▀▀ █░█░█ █▀█ ░█░ █ █░ █▀█
+ ▀░░░▀ ▀░▀ ░▀░ ▀▀▀ ▀░░░▀ ▀░▀ ░▀░ ▀ ░▀ ▀░▀
+                 █▀▄ ▄▀▄
+                 █░█ █░█
+                 ▀▀░ ░▀░
+╔════╗     ╔╗───╔╗─╔╗╔╗─╔╗╔╗─╔╗╔═══╗╔╗╔═╗
+╚══╗═║     ║║───║║─║║║║─║║║║─║║║╔═╗║║║║╔╝
+──╔╝╔╝     ║║───║║─║║║║─║║║║─║║║║─╚╝║╚╝╝─
+─╔╝╔╝─     ║║─╔╗║║─║║║║─║║║║─║║║║─╔╗║╔╗║─
+╔╝═╚═╗     ║╚═╝║║╚═╝║║╚═╝║║╚═╝║║╚═╝║║║║╚╗
+╚════╝     ╚═══╝╚═══╝╚═══╝╚═══╝╚═══╝╚╝╚═╝
+
+    [ 1 ] Equação de posição em função do tempo descobrindo o X
+    [ 2 ] Equação de posição em função do tempo descobrindo o t
+"""
+
 print(txt)
 opção = input(': ')
 if opção == '1':
@@ -540,11 +499,7 @@ elif opção == '5':
 elif opção == '6':
     medidas()
 elif opção == '7':
-    print('não ta desenvolvido')
-    time.sleep(1)
-    print('fechando..')
-    time.sleep(1)
-    os.system('clear')
+    fisica()
 elif opção == '8':
     prodNot()
 else:
