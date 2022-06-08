@@ -156,7 +156,7 @@ def medidas():
         print(f'{cm}cm, Centimetros')
         print(f'{mm}mm, Milímetros')
 
-    elif tipo == 'km' or tipo == 'kilometros' or tipo == 'KM':
+    elif tipo == 'km' or tipo == 'kilometros':
         mm = metro * 1000000
         cm = metro * 100000
         dm = metro * 10000
