@@ -25,7 +25,7 @@
 <h3> ~ $ pkg install python -y</h3>
 <h3> ~ $ git clone https://github.com/zLuuuck/Matematica.git  </h3>
 <h3> ~ $ cd Matematica </h3>
-<h3> ~ $ python main.py </h3 </h3>
+<h3> ~ $ python main.py </h3>
 
 <h2> 🖥️ Debian/Ubuntu 💻 </h2>
 
