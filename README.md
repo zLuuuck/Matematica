@@ -12,6 +12,8 @@
 <h3> (𝓩) Pitagoras descobrindo Hipotenusa </h3>
 <h3> (𝓩) Pitagoras descobrindo Cateto </h3>
 <h3> (𝓩) Produtos Notáveis </h3>
+<h3> (𝓩) Medidas </h3>
+<h3> (𝓩) Massas </h3>
 <h3> (X) Física (Em Breve) </h3>
 
 <h1> Programa para resolução de algumas contas matemáticas</h1>
