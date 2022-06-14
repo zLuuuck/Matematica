@@ -4,15 +4,15 @@
 
 <h1> UTILIDADES: </h1>
 
-<h3> (𝓩) Tabuada 50X <h3>
-<h3> (𝓩) Desconto em % <h3>
-<h3> (𝓩) Aumento em % </h3>
-<h3> (𝓩) Pitágoras calculando a hipotenusa</h3>
-<h3> (𝓩) Pitágoras calculando um dos catetos </h3>
-<h3> (𝓩) Potencia </h3>
+<h3> (𝓩) Tabuada 100x </h3>
 <h3> (𝓩) Raiz Quadrada </h3>
-<h3> (𝓩) Medidas de comprimento </h3>
-<h3> (;<) Física (Não desenvolvido) </h3>
+<h3> (𝓩) Potencia </h3>
+<h3> (𝓩) Porcentagem (Aumento) </h3>
+<h3> (𝓩) Porcentagem (Desconto) </h3>
+<h3> (𝓩) Pitagoras descobrindo Hipotenusa </h3>
+<h3> (𝓩) Pitagoras descobrindo Cateto </h3>
+<h3> (𝓩) Produtos Notáveis </h3>
+<h3> (X) Física (Em Breve) </h3>
 
 <h1> Programa para resolução de algumas contas matemáticas</h1>
 
